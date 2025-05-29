@@ -1,0 +1,7 @@
+const users = [
+    {id: 1 , name: 'Sara Lopes' , age: 25 , job: 'Data', img: 'https://api.dicebear.com/9.x/adventurer/svg?seed=Aidan'},
+    {id: 2 , name: 'Nick Park' , age: 23 , job: 'Full stack Developer', img: 'https://api.dicebear.com/9.x/adventurer/svg?seed=Liam'},
+    {id: 3 , name: 'Adenis' , age: 26 , job: 'Back End Developer', img: 'https://api.dicebear.com/9.x/adventurer/svg?seed=Emery'}
+]
+
+export default users;
