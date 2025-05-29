@@ -1,12 +1,40 @@
-# React + Vite
+# 🚀 React Mini Projects
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A collection of small React JS projects built for practice, learning, and portfolio development 🎯  
+Each project focuses on a specific React concept such as props, state, conditional rendering, hooks & ... .
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 📁 Projects
 
-## Expanding the ESLint configuration
+| Project Name | Description | Concepts Used |
+|--------------|-------------|----------------|
+| `UserCard`   | Displays a user card with toggleable extra details | `props`, `useState`, `conditional rendering`, `map` |
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+*More projects will be added as development progresses.*
+
+---
+
+## ⚙️ Tech Stack
+
+- ⚛️ React JS (with Vite )
+- 💅 Tailwind CSS for styling
+- 📦 JavaScript ES6+ (with Hooks)
+- 💻 VSCode as the code editor
+- 🐙 Git & GitHub for version control and hosting
+
+---
+
+## 🎯 Purpose of This Repository
+
+- Practice and strengthen React fundamentals
+- Build real mini-projects for learning and showcasing
+
+---
+
+## 🛠️ Getting Started
+
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/your-username/react-mini-projects.git
+   cd react-mini-projects
