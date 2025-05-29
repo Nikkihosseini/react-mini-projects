@@ -3,6 +3,7 @@ import { useState } from "react"
 export default function UserCard(props){
     
     const [showMore , setShowmore] = useState(false)
+    const [like , setLike] = useState(false)
 
     const moreDetails = ()=>{
         setShowmore(!showMore)
@@ -20,7 +21,10 @@ export default function UserCard(props){
                     <span className="block mb-1">{props.job}</span>
                     {showMore && <span className="block mb-1">{props.email}</span>}
                     {showMore && <span className="block">{props.description}</span>}
-                    <button onClick={moreDetails} className="mt-3 px-4 py-1 bg-stone-800 text-white rounded-md hover:bg-stone-700 transition duration-200 focus:outline-none">{!showMore ? 'Show More' : 'Show Less'}</button>
+                    <div>
+                        <button onClick={moreDetails} className="mt-3 px-4 py-1 bg-stone-800 text-white rounded-md hover:bg-stone-700 transition duration-200 focus:outline-none">{!showMore ? 'Show More' : 'Show Less'}</button>
+                        <button className="bg-stone-200 border-none outline-none focus:outline-none" onClick={()=>setLike(!like)}>{like ? "💖 Liked" : "🤍 Like"}</button>
+                    </div>
                </div>
             </div>
         </>
