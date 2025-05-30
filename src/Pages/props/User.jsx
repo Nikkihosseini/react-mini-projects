@@ -2,14 +2,11 @@ import { useState } from "react"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTrash } from '@fortawesome/free-solid-svg-icons';
 
-export default function User({id, img, name, age, job, email, description , newUserList, setNewUserList }){
+export default function User({id, name, age, job, email, description , newUserList, setNewUserList }){
     
     const [showMore , setShowmore] = useState(false)
     const [like , setLike] = useState(false)
     
-
-    console.log(newUserList)
-
     const moreDetails = ()=>{
         setShowmore(!showMore)
     }
@@ -30,7 +27,7 @@ export default function User({id, img, name, age, job, email, description , newU
                     </button>
                    </div>
                 <div className="overflow-hidden rounded-full w-[200px] h-[200px] mx-auto">
-                    <img className="inline-block w-full h-full object-cover" src={img} alt="user-img"/>
+                    <img className="inline-block w-full h-full object-cover" src={`https://api.dicebear.com/8.x/bottts/svg?seed=${id}`}  alt="user-img"/>
                 </div>
                 <h1 className="text-xl font-bold mb-1">{name}</h1>
                     <span className="block mb-1 font-semibold">{age}</span>
