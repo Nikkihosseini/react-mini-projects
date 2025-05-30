@@ -4,7 +4,6 @@ const users = [
         name: 'Sara Lopes' , 
         age: 25 , 
         job: 'Data', 
-        img: 'https://api.dicebear.com/9.x/adventurer/svg?seed=Aidan', 
         email: 'SaraLopes@email.com', 
         description: "Loves working with AI and big data."
     },
@@ -13,7 +12,6 @@ const users = [
         name: 'Nick Park' , 
         age: 23 , 
         job: 'Full stack Developer', 
-        img: 'https://api.dicebear.com/9.x/adventurer/svg?seed=Liam', 
         email: 'NickPark@email.com', 
         description: "Loves working code"
     },
@@ -22,7 +20,6 @@ const users = [
         name: 'Adenis' , 
         age: 26 , 
         job: 'Back End Developer', 
-        img: 'https://api.dicebear.com/9.x/adventurer/svg?seed=Emery', 
         email: 'Adenis@email.com', 
         description: "Loves working with Serves and Data"
     }
