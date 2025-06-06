@@ -1,11 +1,20 @@
-import { useState } from "react"
+import { useState , useEffect } from "react"
 import User from './User.jsx'
-import users from './UsersData.jsx'
 import AddNewUser from "./AddNewUser.jsx"
+import axios from "axios"
 
 export default function UserCard(){
 
-    const [newUserList , setNewUserList] = useState(users)
+    const [newUserList , setNewUserList] = useState([])
+
+    useEffect(()=>{
+        axios
+        .get("https://jsonplaceholder.typicode.com/users")
+        .then((res) => setNewUserList(res.data))
+        .catch((error) => console.error("خطا در گرفتن کاربران:", error));
+    }, []);
+
+    console.log(newUserList)
 
     return (
         <>
@@ -16,7 +25,7 @@ export default function UserCard(){
             
             <div className="flex flex-wrap justify-center items-center gap-8 bg-slate-800 overflow-x-hidden my-10">
              {newUserList.map(user =>(
-               <User key={user.id} {...user} newUserList={newUserList} setNewUserList={setNewUserList} />
+               <User key={user.id} user={user} newUserList={newUserList} setNewUserList={setNewUserList} />
             ))}
            </div>
         </>
