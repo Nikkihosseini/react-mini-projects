@@ -1,7 +1,6 @@
 import { useState } from "react"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faPlus } from '@fortawesome/free-solid-svg-icons';
-import users from './UsersData'
 
 export default function AddNewUser({newUserList , setNewUserList}){
     const [newUser , setNewUser] = useState({

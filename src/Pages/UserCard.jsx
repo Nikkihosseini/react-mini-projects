@@ -1,6 +1,6 @@
 import { useState , useEffect } from "react"
-import User from './User.jsx'
-import AddNewUser from "./AddNewUser.jsx"
+import User from '../component/props/User.jsx'
+import AddNewUser from "../component/props/AddNewUser.jsx"
 import axios from "axios"
 
 export default function UserCard(){

@@ -5,7 +5,7 @@ export default function Header(){
      <>
         <header className="fixed top-8 w-[90%] h-20 z-50 bg-purple-glitch/20 backdrop-blur-md border-4 border-neon-blue p-3">
            <div className="flex items-center justify-between h-full">
-                <h1 className="text-md md:text-2xl tracking-widest uppercase text-retro-mint-green">
+                <h1 className="flex items-center text-md md:text-2xl tracking-widest uppercase text-retro-mint-green">
                 🕹️ Projects Archive
                 </h1>
                 <ul className='flex items-center gap-5 text-center'>

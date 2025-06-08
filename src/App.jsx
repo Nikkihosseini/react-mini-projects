@@ -1,6 +1,6 @@
 import Home from './Pages/Project/Home'
 import Project from './Pages/Project/Project'
-import UserCard from './Pages/props/UserCard'
+import UserCard from './Pages/UserCard'
 import { BrowserRouter as Router , Routes , Route } from 'react-router-dom'
 import './index.css'
 
@@ -15,6 +15,9 @@ export default function App() {
           {/* <Route path='/About' element={<About/>} />
           <Route path='/Contact' element={<Contact/>} /> */}
           <Route path='/UserCard' element={<UserCard/>} />
+          <Route path='*' element={<div className='flex flex-col items-center justify-center gap-2 mt-30 text-5xl font-pixel min-h-screen text-glitch-red bg-void-black w-screen'>
+            <img className='inline-block max-w-52  max-h-52' src="./public/png-icon/error.png" alt="error-png"/>
+            Page Not Found !</div>} />
         </Routes>
       </Router>
     </>
