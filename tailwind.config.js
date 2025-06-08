@@ -4,7 +4,11 @@ module.exports = {
     "./public/index.html"
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        pixel: ['"Press Start 2P"', 'cursive']
+      },
+    },
   },
   plugins: [],
 }
