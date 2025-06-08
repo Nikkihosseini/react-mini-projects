@@ -1,12 +1,18 @@
 import Home from './Pages/Home'
-import React from 'react'
+import UserCard from './Pages/props/UserCard'
+import { BrowserRouter as Router , Routes , Route } from 'react-router-dom'
 import './index.css'
 
 
 export default function App() {
   return (
     <>
-     <Home/>
+      <Router>
+        <Routes>
+          <Route path='/' element={<Home/>} />
+          <Route path='/UserCard' element={<UserCard/>} />
+        </Routes>
+      </Router>
     </>
   )
 }
