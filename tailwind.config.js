@@ -15,7 +15,8 @@ module.exports = {
         "retro-mint-green": '#7ED6A7',
         "purple-glitch": '#8F4EAB',
         "lime-crt-glow": '#A8E6CF',
-        'foggy-lilac': '#C8B6FF'
+        'foggy-lilac': '#C8B6FF',
+        "glitch-red": "#FF4C58"
       },
     },
   },
