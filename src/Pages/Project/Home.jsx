@@ -11,7 +11,7 @@ export default function Home(){
                             <img className='inline-block w-7 h-7' src="./public/png-icon/sword.png" alt="sword-png"/>
                         </li>
                         <li className="flex items-center justify-center gap-3 text-purple-600 border-[3px] border-purple-600 bg-black px-5 py-2 shadow-[4px_4px_0px_rgba(255,255,0,0.5)] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[1px_1px_0px_rgba(255,255,0,0.5)] transition cursor-pointer">
-                            <Link to='/Project'>Project</Link>
+                            <Link to='/Project'>Projects</Link>
                             <img className='inline-block w-7 h-7' src="./public/png-icon/star.png" alt="star-png"/>
                         </li>
                         <li className="flex items-center justify-center gap-3 text-purple-600 border-[3px] border-purple-600 bg-black px-5 py-2 shadow-[4px_4px_0px_rgba(255,255,0,0.5)] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[1px_1px_0px_rgba(255,255,0,0.5)] transition cursor-pointer">
