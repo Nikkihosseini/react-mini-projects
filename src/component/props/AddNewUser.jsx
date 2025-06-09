@@ -38,7 +38,7 @@ export default function AddNewUser({newUserList , setNewUserList}){
                     <textarea onChange={(e) => setNewUser(prev =>({...prev , description: e.target.value}))} className="px-1 w-full min-h-[45px] max-h-[45x] rounded-md bg-stone-400 text-purple-glitch" type="text" name="description" id="description" value={newUser.description}/>
                 </div>
 
-                <button className="text-sm flex items-center justify-center gap-2 mx-auto outline-none border-none mt-10 px-4 py-1 rounded-md text-white bg-neon-blue hover:bg-cosmic-indigo hover:text-lime-crt-glow  transition duration-200 focus:outline-none" onClick={addNewUser}>
+                <button className="text-sm flex items-center justify-center gap-2 mx-auto outline-none border-none mt-10 px-4 py-1 rounded-none shadow-[4px_4px_0px_rgba(255,255,0,0.5)] text-white bg-neon-blue hover:bg-cosmic-indigo hover:text-lime-crt-glow focus:outline-none hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[1px_1px_0px_rgba(255,255,0,0.5)] transition" onClick={addNewUser}>
                         <FontAwesomeIcon icon={faPlus} className="text-glitch-red" size="lg" />Add New User
                 </button>
            </div>
