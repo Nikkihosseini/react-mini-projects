@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTrash } from '@fortawesome/free-solid-svg-icons';
 
 export default function User({user, newUserList, setNewUserList }){
+
     
     const [showMore , setShowmore] = useState(false)
     const [like , setLike] = useState(false)
@@ -31,9 +32,9 @@ export default function User({user, newUserList, setNewUserList }){
                 </div>
                     <h1 className={`text-xl font-bold mb-1 text-cosmic-indigo ${!showMore ? 'line-clamp-2' : 'line-clamp-none'}`}>{user.name}</h1>
                     <h3 className={`mb-1 font-semibold text-[12px] w-full ${!showMore ? 'line-clamp-2' : 'line-clamp-none'}`}>Phone:{user.phone}</h3>
-                    <h4 className={`mb-1 text-sm w-full ${!showMore ? 'line-clamp-2' : 'line-clamp-none'}`}>Company:{user.company.name}</h4>
+                    <h4 className={`mb-1 text-sm w-full ${!showMore ? 'line-clamp-2' : 'line-clamp-none'}`}>Company:{user.username}</h4>
                     {showMore && <span className="block mb-1 text-sm">email:{user.email}</span>}
-                    {showMore && <span className="block text-sm">Address:{user.address.city}</span>}
+                    {showMore && <span className="block text-sm">Address:{user.website}</span>}
                     <div className="flex items-center gap-1 max-h-[36px] mt-3">
                         <button onClick={moreDetails} className="h-full basis-[60%] text-sm rounded-none p-2 bg-stone-800 text-lime-crt-glow hover:bg-stone-700 transition duration-200 border-none outline-none focus:outline-none">{!showMore ? 'Show More' : 'Show Less'}</button>
                         <button className="h-full basis-[40%] text-sm rounded-none bg-stone-200 hover:bg-slate-300 text-cosmic-indigo border-none outline-none focus:outline-none p-2" onClick={()=>setLike(!like)}>{like ? "💖Liked" : "🤍Like"}</button>
