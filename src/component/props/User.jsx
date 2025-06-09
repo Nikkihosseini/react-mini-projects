@@ -19,7 +19,7 @@ export default function User({user, newUserList, setNewUserList }){
 
     return(
         <>
-            <div className="flex items-center justify-center w-screen min-h-screen bg-slate-800 overflow-x-hidden">
+            <div className="flex items-center justify-center w-screen min-h-screen overflow-x-hidden">
                 <div className="bg-stone-200 w-[292px] h-auto p-5 rounded-md text-stone-900 text-center shadow-md shadow-stone-100">
                    <div className="flex items-center justify-between">
                      <button className="text-sm bg-inherit flex items-center gap-1 outline-none border-none focus:outline-none" onClick={() => deleteUser(user.id)}>

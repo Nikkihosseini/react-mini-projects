@@ -14,7 +14,7 @@ export default function Header(){
                             <img className='inline-block w-7 h-7' src="./public/png-icon/sword.png" alt="sword-png"/>
                         </li>
                         <li className="flex items-center justify-center gap-3 text-lime-crt-glow cursor-pointer">
-                            <Link to='/Project'>Project</Link>
+                            <Link to='/Project'>Projects</Link>
                             <img className='inline-block w-7 h-7' src="./public/png-icon/star.png" alt="star-png"/>
                         </li>
                         <li className="flex items-center justify-center gap-3 text-lime-crt-glow cursor-pointer">
