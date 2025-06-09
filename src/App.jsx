@@ -1,6 +1,6 @@
-import Home from './Pages/Project/Home'
+import Home from './Pages/Home'
 import Project from './Pages/Project/Project'
-import UserCard from './Pages/UserCard'
+import UserCard from './Pages/Project/UserCard'
 import { BrowserRouter as Router , Routes , Route } from 'react-router-dom'
 import './index.css'
 

@@ -1,6 +1,6 @@
 import { useState , useEffect } from "react"
-import User from '../component/props/User.jsx'
-import AddNewUser from "../component/props/AddNewUser.jsx"
+import User from '../../component/props/User.jsx'
+import AddNewUser from "../../component/props/AddNewUser.jsx"
 import axios from "axios"
 
 export default function UserCard(){
@@ -14,7 +14,6 @@ export default function UserCard(){
         .catch((error) => console.error("خطا در گرفتن کاربران:", error));
     }, []);
 
-    console.log(newUserList)
 
     return (
         <>
