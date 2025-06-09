@@ -3,7 +3,7 @@ import { Link } from "react-router-dom"
 export default function Header(){
     return(
      <>
-        <header className="fixed top-8 w-[90%] h-20 z-50 bg-purple-glitch/20 backdrop-blur-md border-4 border-neon-blue p-3">
+        <header className="fixed top-8 right-0 left-0 w-[90%] h-20 z-50 bg-purple-glitch/20 backdrop-blur-md border-4 border-neon-blue p-3 mx-auto">
            <div className="flex items-center justify-between h-full">
                 <h1 className="flex items-center text-md md:text-2xl tracking-widest uppercase text-retro-mint-green">
                 🕹️ Projects Archive

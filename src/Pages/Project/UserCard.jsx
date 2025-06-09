@@ -1,6 +1,7 @@
 import { useState , useEffect } from "react"
 import User from '../../component/props/User.jsx'
 import AddNewUser from "../../component/props/AddNewUser.jsx"
+import Header from "../../component/Header.jsx"
 import axios from "axios"
 
 export default function UserCard(){
@@ -17,7 +18,8 @@ export default function UserCard(){
 
     return (
         <>
-           <AddNewUser 
+            <Header/>
+            <AddNewUser 
                 newUserList={newUserList}
                 setNewUserList={setNewUserList}
             />
