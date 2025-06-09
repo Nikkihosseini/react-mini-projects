@@ -12,13 +12,10 @@ export default function AddNewUser({newUserList , setNewUserList}){
         email: '',
         website: ''
     })
-
    
     const addNewUser = ()=>{
         setNewUserList([...newUserList , newUser])
     }
-
-    console.log(newUserList)
 
     return(
         <>
