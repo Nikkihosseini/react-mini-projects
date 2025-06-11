@@ -46,12 +46,16 @@ export default function PokemonGallery(){
                     SAID TO LIVE NEAR WARM AND HUMAN PLACES IT ISSUES A WARNING CRY WHENEVER IT FEELS THREATENED.
                 </p>
             </div>
-            <div className='flex items-center justify-between'>
-                <div className='basis-[30%]'></div>
-                <div className='basis-[60%] text-[13px] opacity-40'>
-                    <h3>PROPERTY OF KANTO LEAGUE</h3>
+            <div className='flex items-center justify-between p-1'>
+                <div className='flex items-center justify-center bg-neon-blue/10 hover:bg-neon-blue/20 transition-all basis-[30%]'>
+                    <button className='w-[90%] bg-transparent outline-none border-none focus:outline-none'>Pre</button>
                 </div>
-                <div className='basis-[30%]'></div>
+                <div className='basis-[60%] text-[13px] opacity-40 px-1'>
+                    <h3 className='line-clamp-2 text-center'>PROPERTY OF KANTO LEAGUE</h3>
+                </div>
+                <div className='flex items-center justify-center bg-neon-blue/10 hover:bg-neon-blue/20 transition-all basis-[30%]'>
+                    <button className='w-[90%] bg-transparent outline-none border-none focus:outline-none'>Next</button>
+                </div>
             </div>
             </div>
             </div>
