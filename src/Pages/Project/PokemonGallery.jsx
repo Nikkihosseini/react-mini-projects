@@ -77,12 +77,18 @@ export default function PokemonGallery(){
                         <span className='line opacity-40'></span>
                     </div>
                     <span className='block text-[13px]'>SEC CODE</span>
-                    <span className='block'>{crypto.randomUUID().slice(0 , 6)}</span>
+                    <span className='block transition-all'>{uuid.slice(0 , 6)}</span>
                     <span className='block text-[13px]'>ATTACK POWER</span>
                     <span className='block'>{pokemonData?.stats?.[0]?.base_stat || "Loading..."} {uuid.slice(0 , 2)}</span>
                     <div className='flex flex-col items-start'>
                         <span className='inline-block bg-retro-mint-green p-1 mb-2 text-void-black whitespace-nowrap'>{pokemonData?.moves?.[0]?.move?.name || "Loading..."}</span>
-                        <span className='inline-block bg-retro-mint-green p-1 text-void-black whitespace-nowrap'>{pokemonData?.moves?.[5]?.move?.name || "Loading..."}</span>
+                        {pokemonData?.moves?.[5] ? (
+                             <span className='inline-block bg-retro-mint-green p-1 text-void-black whitespace-nowrap'>
+                                  {pokemonData.moves[5].move.name}
+                             </span>
+                        ) :  <span className='inline-block bg-retro-mint-green p-1 text-void-black whitespace-nowrap'>
+                             No move
+                            </span>}
                     </div>
                 </div>
             </div>
