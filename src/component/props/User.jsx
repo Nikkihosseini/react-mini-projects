@@ -21,7 +21,7 @@ export default function User({user, newUserList, setNewUserList }){
     return(
         <>
             <div className="flex items-center justify-center w-screen min-h-screen overflow-x-hidden">
-                <div className={`flex flex-col justify-between bg-foggy-lilac text-purple-glitch shadow-[4px_4px_0px_rgba(255,255,0,0.5)] w-[292px] ${!showMore ? "h-[450px]" : "h-auto"} p-3 text-center overflow-wrap break-words`}>
+                <div className={`flex flex-col justify-between bg-foggy-lilac text-purple-glitch shadow-[4px_4px_0px_#FFE5B4] dark:shadow-[4px_4px_0px_rgba(255,255,0,0.5)] w-[292px] ${!showMore ? "h-[450px]" : "h-auto"} p-3 text-center overflow-wrap break-words`}>
                    <div className="flex items-center justify-between">
                      <button className="text-cosmic-indigo text-sm bg-inherit flex items-center gap-2 outline-none border-none focus:outline-none" onClick={() => deleteUser(user.id)}>
                         <FontAwesomeIcon icon={faTrash} className="text-glitch-red mb-0.5" />Delete User
