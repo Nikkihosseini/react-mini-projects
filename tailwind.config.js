@@ -17,7 +17,15 @@ module.exports = {
         "purple-glitch": '#8F4EAB',
         "lime-crt-glow": '#A8E6CF',
         'foggy-lilac': '#C8B6FF',
-        "glitch-red": "#FF4C58"
+        "glitch-red": "#FF4C58",
+        "crt-white": "#F8F8F2",         // سفید نرم مثل پس‌زمینه مانیتورهای CRT
+        "vintage-rose": "#FFD6D6",      // صورتی روشن با حس نوستالژیک
+        "gameboy-green": "#C4E3CB",     // سبز کمرنگ یادآور گیم‌بوی کلاسیک
+        "soft-lavender": "#E6DAF8",     // یاسی ملایم مثل آسمون فانتزی بازی‌های RPG
+        "peach-fuzz": "#FFE5B4",        // هلویی روشن و نوستالژیک
+        "sky-cartridge-blue": "#A3D2FF", // آبی کمرنگ مثل لیبل‌ بازی‌های کارتریجی
+        "pastel-glitch-purple": "#D1A3FF", // ترکیب بنفش-پاستلی که حس فانتزی پیکسلی داره
+        "warm-glow-yellow": "#FFF8C5"   // زرد خیلی لطیف، مثل نور لامپ زرد قدیمی
       },
     },
   },
