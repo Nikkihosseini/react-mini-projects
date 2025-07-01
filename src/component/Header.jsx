@@ -1,25 +1,12 @@
 import { Link } from "react-router-dom"
 import { useState , useEffect } from "react";
+import ThemeToggleButton from './../component/ThemeToggleButton'
 
 export default function Header(){
 
-    const [isDark, setIsDark] = useState(false); 
-
-
-    const toggleTheme = () => {
-        document.documentElement.classList.toggle("dark");
-        const isNowDark = document.documentElement.classList.contains("dark");
-        setIsDark(isNowDark); 
-    };
-
-    useEffect(() => {
-        const darkModeOn = document.documentElement.classList.contains("dark");
-        setIsDark(darkModeOn);
-    }, []);
-
     return(
      <>
-        <header className="fixed top-8 right-0 left-0 w-[90%] h-20 z-50  dark:bg-purple-glitch/20 bg-soft-lavender/20 backdrop-blur-md border-4 border-neon-blue p-3 mx-auto">
+        <header className="fixed top-8 right-0 left-0 w-[90%] h-20 z-50 dark:bg-purple-glitch/20 bg-soft-lavender/20 backdrop-blur-md border-4 border-neon-blue p-3 mx-auto">
            <div className="flex items-center justify-between h-full">
                 <h1 className="flex items-center text-md md:text-2xl tracking-widest uppercase text-sky-cartridge-blue dark:text-retro-mint-green">
                 🕹️ Projects Archive
@@ -45,10 +32,8 @@ export default function Header(){
                             className="flex items-center justify-center gap-3 text-pastel-glitch-purple dark:text-lime-crt-glow hover:text-soft-lavender dark:hover:text-retro-mint-green cursor-pointer">Contact
                             <img className='inline-block w-7 h-7' src="./public/png-icon/chat.png" alt="chat-png"/></Link>
                         </li>
-                         <li onClick={toggleTheme}
-                                className="flex items-center justify-center gap-3 text-pastel-glitch-purple dark:text-lime-crt-glow hover:text-soft-lavender dark:hover:text-retro-mint-green cursor-pointer">
-                                Them
-                                {/* <img src={isDark ? "/icons/sun.png" : "/icons/moon.png"} alt="theme-icon" /> */}
+                          <li className="flex items-center justify-center gap-3 text-pastel-glitch-purple dark:text-lime-crt-glow hover:text-soft-lavender dark:hover:text-retro-mint-green cursor-pointer">
+                               <ThemeToggleButton/>
                         </li>
                 </ul>
            </div>
@@ -56,4 +41,3 @@ export default function Header(){
      </>  
     )    
 }
-

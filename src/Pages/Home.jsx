@@ -1,17 +1,18 @@
 import {Link} from 'react-router-dom'
+import ThemeToggleButton from  './../component/ThemeToggleButton'
 
 
 export default function Home(){
 
     return(
         <> 
-            <div className="flex flex-col items-center justify-center w-screen min-h-screen dark:bg-void-black overflow-x-hidden bg-crt-white">
-                <div onClick={toggleTheme}
-                    className="flex items-center justify-center gap-3 text-pastel-glitch-purple dark:text-lime-crt-glow hover:text-soft-lavender dark:hover:text-retro-mint-green cursor-pointer">
-                    Them
-                    {/* <img src={isDark ? "/icons/sun.png" : "/icons/moon.png"} alt="theme-icon" /> */}
+            <div className="flex flex-col items-center w-screen min-h-screen max-h-screen dark:bg-void-black overflow-hidden bg-crt-white">
+
+                <div className='flex items-end justify-end w-[90%] mt-8'>
+                    <ThemeToggleButton/>
                 </div>
-                <ul className='flex items-center flex-col gap-5 text-center'>
+               
+                <ul className='flex items-center justify-center min-h-screen flex-col gap-5 text-center -mt-10'>
                         <li>
                             <Link to='/'
                             className="flex items-center justify-center gap-3 font-pixel text-purple-600 border-[3px] border-purple-600 bg-gameboy-green dark:bg-black px-5 py-2 shadow-[4px_4px_0px_rgba(255,229,180,1)] dark:shadow-[4px_4px_0px_rgba(255,255,0,0.5)] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[1px_1px_0px_rgba(255,255,0,0.5)] transition cursor-pointer">Home
