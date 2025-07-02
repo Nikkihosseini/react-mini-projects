@@ -21,7 +21,7 @@ export default function ThemeToggleButton(){
                 className="flex items-center justify-center gap-3 text-pastel-glitch-purple dark:text-lime-crt-glow hover:text-soft-lavender dark:hover:text-retro-mint-green cursor-pointer" 
                 >
                     Theme
-               {/* <img src={isDark ? "/icons/sun.png" : "/icons/moon.png"} alt="theme-icon" /> */}
+               <img className='inline-block w-6 h-6' src={isDark ? "/png-icon/sun.png" : "/png-icon/moon.png"} alt="theme-icon" />
             </div>
         </>
     )
