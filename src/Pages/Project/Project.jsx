@@ -9,6 +9,7 @@ export default function Project(){
                  <ul className='flex items-start flex-col justify-start gap-5 text-center mt-[10rem]'>
                         <ProjectBtn link='/Usercard' text="User Card Mini Project"/>
                         <ProjectBtn link='/PokemonGallery' text="Pokemon Gallery Mini Project"/>
+                        <ProjectBtn link='/PokemonShop' text="Pokemon Shop Mini Project"/>
                 </ul>
             </div>
                 
