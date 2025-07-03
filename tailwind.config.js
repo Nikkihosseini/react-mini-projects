@@ -27,6 +27,17 @@ module.exports = {
         "pastel-glitch-purple": "#D1A3FF", // ترکیب بنفش-پاستلی که حس فانتزی پیکسلی داره
         "warm-glow-yellow": "#FFF8C5"   // زرد خیلی لطیف، مثل نور لامپ زرد قدیمی
       },
+      container: {
+      center: true,
+      padding: '1rem',
+       screens: {
+          'xs': '480px',
+          'sm': '640px',
+          'md': '768px',
+          'lg': '1024px',
+          'xl': '1280px',
+        },
+      },
     },
   },
   plugins: [],
