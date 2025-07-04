@@ -60,12 +60,10 @@ function loadPokemons() {
     <>
       <Header />
       <div className="container mx-auto">
-        <div className="">
-
-        </div>
-      <div className="mt-36">
-           <PokemonShopHeader/>
-      </div>
+        <div className="flex flex-col items-center justify-between gap-y-6">
+            <div className="mt-36 w-full">
+                <PokemonShopHeader/>
+            </div>
 
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3.5 md:gap-5">
           {pokemonList.map(poke => (
@@ -73,7 +71,7 @@ function loadPokemons() {
           ))}
         </div>
 
-        <div className="flex justify-center my-6">
+        <div className="flex justify-center mb-6">
           <button
             onClick={loadPokemons}
             disabled={loading}
@@ -83,6 +81,7 @@ function loadPokemons() {
           </button>
         </div>
       </div>
+    </div>
     </>
   );
 }
