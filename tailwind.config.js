@@ -30,7 +30,6 @@ module.exports = {
       container: {
       center: true,
       padding: '1rem',
-      margin: 'auto',
        screens: {
           'xs': '480px',
           'sm': '640px',

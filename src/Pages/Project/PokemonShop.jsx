@@ -1,42 +1,81 @@
-import Header from "../../component/Header"
-import PokemonBox from "../../component/PokemonBox"
-import { useState , useEffect } from "react";
-import axios from "axios"
+import { useState, useEffect } from "react";
+import axios from "axios";
+import PokemonBox from "../../component/PokemonBox";
+import Header from "../../component/Header";
+
+export default function PokemonShop() {
+
+  const [pokemonList, setPokemonList] = useState([]);
+  const [offset, setOffset] = useState(0);
+  const [loading, setLoading] = useState(false);
+  const limit = 10;
+
+  useEffect(() => {
+    loadPokemons();
+  }, []);
+
+function loadPokemons() {
+  setLoading(true);
+
+  axios.get(`https://pokeapi.co/api/v2/pokemon?offset=${offset}&limit=${limit}`)
+    .then(res => {
+      const results = res.data.results;
+      let counter = 0;
+
+      results.forEach(poke => {
+        axios.get(poke.url)
+          .then(res => {
+            const newPokemon = res.data;
+            setPokemonList(prev => {
+              const exists = prev.find(p => p.id === newPokemon.id);
+              if (exists) return prev;
+              return [...prev, newPokemon];
+            });
+          })
+          .finally(() => {
+            counter++;
+            if (counter === results.length) {
+              // وقتی همه‌ی درخواست‌ها برگشتن
+              setOffset(prev => prev + limit);
+              setLoading(false);
+            }
+          });
+      });
+
+      // اگر لیست خالی بود (مثلاً آخر لیست)، فوراً بارگذاری رو تموم کن
+      if (results.length === 0) {
+        setLoading(false);
+      }
+    })
+    .catch(error => {
+      alert("Oops! Failed to load the initial list of Pokémons.");
+      setLoading(false);
+    });
+}
 
 
-export default function PokemonShop (){
 
-    const [pokemonId , setPokemonId] = useState(2);
-    const [pokemonData , setPokemonData] = useState([]);
-    const [uuid, setUuid] = useState(crypto.randomUUID());
 
-    useEffect(()=>{
-        axios.get(`https://pokeapi.co/api/v2/pokemon`)
-            .then((res) => setPokemonData(res.data))
-            .catch((error) => alert('Error!\nPlease wait', error))
+  return (
+    <>
+      <Header />
+      <div className="container mx-auto">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3.5 md:gap-5 mt-36">
+          {pokemonList.map(poke => (
+            <PokemonBox key={poke.id} poke={poke} />
+          ))}
+        </div>
 
-    }, [pokemonId]);
-
-    useEffect(() => {
-       setUuid(crypto.randomUUID());
-    }, [1]);
-
-    if (!pokemonData || !pokemonData.sprites) {
-        return <div className="text-center mt-20 text-white">Loading...</div>;
-    }
-    
-    console.log(pokemonData)
-
-    return(
-        <>
-            <Header/>
-            <div className="container w-[90%]">
-                <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3.5 md:gap-5">
-                    {pokemonData.map(poke => (
-                        <PokemonBox key={poke.id} poke={poke}/>
-                    ))}
-                </div>
-            </div>
-        </>
-    )
+        <div className="flex justify-center my-6">
+          <button
+            onClick={loadPokemons}
+            disabled={loading}
+            className="px-4 py-2 text-retro-mint-green bg-neon-blue/10 hover:bg-neon-blue/20 transition-all outline-none border-none focus:outline-none"
+          >
+            {loading ? "Loading..." : "Show More"}
+          </button>
+        </div>
+      </div>
+    </>
+  );
 }
