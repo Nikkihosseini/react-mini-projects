@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import PokemonBox from "../../component/PokemonBox";
 import Header from "../../component/Header";
+import PokemonShopHeader from "../../component/PokemonShopHeader"
 
 export default function PokemonShop() {
 
@@ -35,14 +36,13 @@ function loadPokemons() {
           .finally(() => {
             counter++;
             if (counter === results.length) {
-              // وقتی همه‌ی درخواست‌ها برگشتن
+            
               setOffset(prev => prev + limit);
               setLoading(false);
             }
           });
       });
 
-      // اگر لیست خالی بود (مثلاً آخر لیست)، فوراً بارگذاری رو تموم کن
       if (results.length === 0) {
         setLoading(false);
       }
@@ -60,7 +60,14 @@ function loadPokemons() {
     <>
       <Header />
       <div className="container mx-auto">
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3.5 md:gap-5 mt-36">
+        <div className="">
+
+        </div>
+      <div className="mt-36">
+           <PokemonShopHeader/>
+      </div>
+
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3.5 md:gap-5">
           {pokemonList.map(poke => (
             <PokemonBox key={poke.id} poke={poke} />
           ))}

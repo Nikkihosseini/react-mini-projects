@@ -13,7 +13,7 @@ export default function PokemonBox({poke}){
             <div className="flex flex-col items-center justify-between bg-transparent backdrop-blur-md border-2 border-neon-blue uppercase text-retro-mint-green p-1 w-full">
 
                <div className="w-full">
-                    <h1 className="text-2xl text-left w-full line-clamp-1">{poke.name}</h1>
+                    <h2 className="text-2xl text-left w-full line-clamp-1">{poke.name}</h2>
                     <div className="max-w-[297px] h-[300px]">
                         <img className="inline-block w-full h-full object-cover bg-retro-mint-green/50" src={poke.sprites.front_default} alt="" />
                     </div>
