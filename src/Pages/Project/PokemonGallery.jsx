@@ -19,7 +19,7 @@ export default function PokemonGallery(){
 
     useEffect(()=>{
         if (pokemonData?.species?.url){
-             axios.get(pokemonData.species.url)
+            axios.get(pokemonData.species.url)
             .then((res)=>{
                 const speciesData = res.data;
                 const engDescription = speciesData.flavor_text_entries.find(
@@ -31,7 +31,7 @@ export default function PokemonGallery(){
     }, [pokemonData])
 
     useEffect(() => {
-        setUuid(crypto.randomUUID());
+       setUuid(crypto.randomUUID());
     }, [pokemonId]);
 
 
@@ -83,11 +83,11 @@ export default function PokemonGallery(){
                     <div className='flex flex-col items-start'>
                         <span className='inline-block bg-retro-mint-green p-1 mb-2 text-crt-white dark:text-void-black whitespace-nowrap'>{pokemonData?.moves?.[0]?.move?.name || "Loading..."}</span>
                         {pokemonData?.moves?.[5] ? (
-                             <span className='inline-block bg-retro-mint-green p-1 text-crt-white dark:text-void-black whitespace-nowrap'>
+                            <span className='inline-block bg-retro-mint-green p-1 text-crt-white dark:text-void-black whitespace-nowrap'>
                                   {pokemonData.moves[5].move.name}
-                             </span>
+                            </span>
                         ) :  <span className='inline-block bg-retro-mint-green p-1 text-crt-white dark:text-void-black whitespace-nowrap'>
-                             No move
+                            No move
                             </span>}
                     </div>
                 </div>
