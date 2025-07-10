@@ -59,7 +59,7 @@ export default function Header(){
                 </div>
             {/* Mobile Menu List  */}
                 <div className={`${!isOpen ? "-left-52" : "left-0"} inline-block md:hidden dark:bg-void-black bg-crt-white border-r-2 border-r-neon-blue w-52 fixed top-0 bottom-0 bg-gray-250 px-2 pt-2 z-50`}>
-                    <h2 class="font-PoppinsBold text-neon-blue text-center tracking-widest text-sm border-b-2 border-b-neon-blue mb-4 w-full pb-2">
+                    <h2 className="font-PoppinsBold text-neon-blue text-center tracking-widest text-sm border-b-2 border-b-neon-blue mb-4 w-full pb-2">
                         Projects Archive
                     </h2>
                     <ul className='flex flex-col gap-8 items-start justify-between text-[12px] xl:text-sm'>
