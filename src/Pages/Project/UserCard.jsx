@@ -24,7 +24,7 @@ export default function UserCard(){
                 setNewUserList={setNewUserList}
             />
             
-            <div className="flex flex-wrap justify-center items-center gap-8 overflow-x-hidden my-10">
+            <div className="flex flex-wrap justify-center items-center gap-8 overflow-x-hidden -mt-16 mb-8 lg:my-10">
              {newUserList.map(user =>(
                <User key={user.id} user={user} newUserList={newUserList} setNewUserList={setNewUserList} />
             ))}
