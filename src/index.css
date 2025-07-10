@@ -82,6 +82,71 @@ button:focus-visible {
   background-color: #4D9DE0;
 }
 
+
+.hamburger-line{
+  position: relative;
+  width: 1.8rem;
+  height: 0.2rem;
+  background-color: #4D9DE0;
+  border-radius: 0.5rem;
+  display: block;
+}
+
+.hamburger-line::after,
+    .hamburger-line::before{
+  content: '';
+  position: absolute;
+  width: 1.8rem;
+  height: 0.2rem;
+  background-color: #4D9DE0;
+  border-radius: 0.5rem;
+  display: block;
+}
+
+.hamburger-line::after{
+  top: -0.5rem;
+}
+
+.hamburger-line::before{
+  top: 0.5rem
+} 
+
+.active .hamburger-line{
+  background-color: transparent;
+}
+
+.active .hamburger-line::after{
+  transform: translateY(8px) rotate(45deg);
+}
+
+.active .hamburger-line::before{
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+.mobile-menu__link{
+  position: relative;
+}
+
+.mobile-menu__link::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 0.2rem;
+  margin: auto;
+  background-color: #4D9DE0;
+}
+
+.mobile-menu__link:hover::before{
+  width: 1rem;
+}
+
+.mobile-menu__link:hover{
+  padding-left: 1.5rem;
+}
+
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
