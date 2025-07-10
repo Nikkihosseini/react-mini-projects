@@ -57,6 +57,37 @@ export default function Header(){
                          <span className="hamburger-line"></span>
                     </div>
                 </div>
+            {/* Mobile Menu List  */}
+                <div className={`${!isOpen ? "-left-52" : "left-0"} inline-block md:hidden dark:bg-void-black bg-crt-white border-r-2 border-r-neon-blue w-52 fixed top-0 bottom-0 bg-gray-250 px-2 pt-2 z-50`}>
+                    <h2 class="font-PoppinsBold text-neon-blue text-center tracking-widest text-sm border-b-2 border-b-neon-blue mb-4 w-full pb-2">
+                        Projects Archive
+                    </h2>
+                    <ul className='flex flex-col gap-8 items-start justify-between text-[12px] xl:text-sm'>
+                        <li>
+                                <Link to='/'
+                                className="mobile-menu__link flex items-center justify-center gap-1 mr-4  text-pastel-glitch-purple dark:text-lime-crt-glow hover:text-soft-lavender dark:hover:text-retro-mint-green cursor-pointer">Home
+                                <img className='inline-block w-6 h-6 xl:w-7 xl:h-7' src="./public/png-icon/sword.png" alt="sword-png"/></Link>
+                        </li>
+                        <li>
+                                <Link to='/Project'
+                                className="mobile-menu__link flex items-center justify-center gap-1 mr-4 text-pastel-glitch-purple dark:text-lime-crt-glow hover:text-soft-lavender dark:hover:text-retro-mint-green cursor-pointer">Projects
+                                <img className='inline-block w-6 h-6 xl:w-7 xl:h-7' src="./public/png-icon/star.png" alt="star-png"/></Link>
+                        </li>
+                        <li>
+                                <Link to='/About'
+                                className="mobile-menu__link flex items-center justify-center gap-1 mr-4 text-pastel-glitch-purple dark:text-lime-crt-glow hover:text-soft-lavender dark:hover:text-retro-mint-green cursor-pointer">About
+                                <img className='inline-block w-6 h-6 xl:w-7 xl:h-7' src="./public/png-icon/heart.png" alt="heart-png"/></Link>
+                        </li>
+                        <li>
+                            <Link to='/Contact'
+                            className="mobile-menu__link flex items-center justify-center gap-1mr-4 text-pastel-glitch-purple dark:text-lime-crt-glowhover:text-soft-lavender dark:hover:text-retro-mint-greencursor-pointer">Contact
+                            <img className='inline-block w-6 h-6 xl:w-7 xl:h-7' src="./publicpng-icon/chat.png" alt="chat-png"/></Link>
+                        </li>
+                        <li className="mobile-menu__link flex items-center justify-center gap-1 text-pastel-glitch-purple dark:text-lime-crt-glow hover:text-soft-lavender dark:hover:text-retro-mint-green cursor-pointer">
+                                <ThemeToggleButton/>
+                        </li>
+                    </ul>
+                </div>
            
      </>  
     )    
