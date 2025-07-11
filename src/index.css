@@ -65,7 +65,7 @@ button:focus-visible {
 
 
 .line{
-  display: block;
+  display: none;
   border: solid 2px #4D9DE0;
   height: 32px;
   width: 32px;
