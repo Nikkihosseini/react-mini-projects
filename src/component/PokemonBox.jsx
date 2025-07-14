@@ -1,5 +1,6 @@
 import { useState , useEffect } from "react";
 
+
 export default function PokemonBox({poke}){
 
       const [uuid, setUuid] = useState(crypto.randomUUID());

@@ -1,0 +1,24 @@
+import { createContext , useState} from "react";
+
+
+export const CartContext= createContext()
+
+export function CartProvider({children}){
+    const [cartItems , setCartItems] = useState([])
+
+    function addToCart(poke){
+        setCartItems((prevItems)=>[...prevItems , poke])
+    }
+
+    function removeFromCart(id){
+        setCartItems((prevItems) => prevItems.filter(item => item.id !== id))
+    }
+
+    return(
+        <CartContext.Provider value={{cartItems , addToCart , removeFromCart}}>
+            {children}
+        </CartContext.Provider>
+    )
+}
+
+
