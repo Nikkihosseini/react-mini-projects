@@ -39,7 +39,7 @@ export default function PokemonGallery(){
     console.log(pokemonData)
     
     if (!pokemonData || !pokemonData.sprites || !description) {
-        return <div className="text-center mt-20 text-white">Loading...</div>;
+        return <div className="text-center mt-20 text-neon-blue dark:text-white">Loading...</div>;
     }
     
     return(
