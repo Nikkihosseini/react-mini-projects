@@ -26,9 +26,9 @@ export default function PokemonBox({poke}){
                 <div className="flex flex-col items-start justify-between w-full">
                      <div className='flex gap-1 items-start mt-1'>
                         <span className='inline-block text-sm bg-retro-mint-green p-1  text-crt-white dark:text-void-blackwhitespace-nowrap'>{poke?.types?.[0]?.type?.name || "Loading..."}</span>
-                        <span className='inline-block text-sm bg-retro-mint-green p-1 text-crt-white dark:text-void-blackwhitespace-nowrap'>{poke?.types?.[1]?.type?.name || "-"}</span>
+                        <span className='hidden sm:inline-block text-sm bg-retro-mint-green p-1 text-crt-white dark:text-void-blackwhitespace-nowrap'>{poke?.types?.[1]?.type?.name || "-"}</span>
                     </div>
-                    <div className="flex items-start gap-1 mt-1 text-sm">
+                    <div className="mt-1 text-sm text-left">
                         <span className='inline-block'>SEC CODE:</span>
                         <span className='inline-block transition-all'>{uuid.slice(0 , 6)}</span>
                     </div>
@@ -38,7 +38,7 @@ export default function PokemonBox({poke}){
                     </div>
                 </div>
                <div className="flex items-center justify-center mt-1 w-full text-retro-mint-green bg-neon-blue/10 hover:bg-neon-blue/20 transition-all">
-                <button onClick={()=> addToCart({id: poke.id , name: poke.name})} className="w-full bg-transparent outline-none border-none focus:outline-none">َADD POKEMON</button>
+                <button onClick={()=> addToCart({id: poke.id , name: poke.name , img: poke.sprites.front_default})} className="w-full bg-transparent outline-none border-none focus:outline-none">َADD POKEMON</button>
                </div>
             </div>
         </>
