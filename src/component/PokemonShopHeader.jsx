@@ -1,12 +1,18 @@
-
+import {useContext } from "react";
+import {CartContext} from "../component/context/CartContext"
 
 export default function PokemonShopHeader(){
+    
+    const {cartItems} = useContext(CartContext)
+
+    const totalquantity = cartItems.reduce((sum , item) => sum + item.quantity , 0)
+
     return(
         <>
             <div className="flex items-center justify-between border-2 border-neon-blue uppercase text-retro-mint-green p-2">
                 <h1 className="text-3xl">Pokemon Shop</h1>
                 <div className="w-36 text-left">
-                    <span className="flex items-center gap-1"><img className="inline-block w-6 h-6 mb-1.5" src="/png-icon/shopping_cart.png" alt="shopping_cart"/>cart:</span>
+                    <span className="flex items-center gap-1"><img className="inline-block w-6 h-6 mb-1.5" src="/png-icon/shopping_cart.png" alt="shopping_cart"/>cart: {totalquantity}</span>
                 </div>
             </div>
         </>

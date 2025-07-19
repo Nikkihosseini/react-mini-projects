@@ -23,6 +23,7 @@ export function CartProvider({children}){
 
     useEffect(() => {
      console.log("Cart updated:", cartItems);
+     console.log(cartItems.length)
     }, [cartItems]);
 
 
