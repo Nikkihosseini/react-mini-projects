@@ -14,7 +14,7 @@ export default function PokemonShopCart(){
             <Header />
             <div className="container mx-auto">
                 
-                <div className="mt-36 w-full mb-8">
+                <div className="mt-36 w-full">
                     <PokemonShopHeader/>
                 </div>
 
@@ -35,7 +35,7 @@ export default function PokemonShopCart(){
               
                         </div>
                     </div>
-                    
+
             </div>
         </>
     )
