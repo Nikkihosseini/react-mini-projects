@@ -60,8 +60,8 @@ function loadPokemons() {
     <>
       <Header />
       <div className="container mx-auto">
-        <div className="flex flex-col items-center justify-between gap-y-6">
-            <div className="mt-36 w-full">
+        {/* <div className="flex flex-col items-center justify-between gap-y-6"> */}
+            <div className="mt-36 w-full mb-8">
                 <PokemonShopHeader/>
             </div>
 
@@ -80,7 +80,7 @@ function loadPokemons() {
             {loading ? "Loading..." : "Show More"}
           </button>
         </div>
-      </div>
+      {/* </div> */}
     </div>
     </>
   );

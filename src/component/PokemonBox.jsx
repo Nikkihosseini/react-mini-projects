@@ -15,7 +15,7 @@ export default function PokemonBox({poke}){
     
     return(
         <>
-            <div className="flex flex-col items-center justify-between bg-transparent backdrop-blur-md border-2 border-neon-blue uppercase text-retro-mint-green p-1 w-full">
+            <div className="flex flex-col items-center justify-between bg-transparent backdrop-blur-md border-2 border-neon-blue uppercase text-retro-mint-green p-1 w-full z-0">
 
                <div className="w-full">
                     <h2 className="text-2xl text-left w-full line-clamp-1">{poke.name}</h2>
