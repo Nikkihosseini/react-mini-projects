@@ -18,7 +18,7 @@ export default function ThemeToggleButton(props){
         <>
             <div
                 onClick={toggleTheme}
-                className="flex items-center justify-center gap-3 text-pastel-glitch-purple dark:text-lime-crt-glow hover:text-soft-lavender dark:hover:text-retro-mint-green cursor-pointer" 
+                className="flex items-center justify-center gap-1 text-pastel-glitch-purple dark:text-lime-crt-glow md:hover:text-soft-lavender dark:hover:text-retro-mint-green cursor-pointer" 
                 >
                     Theme
                <img className={`${props.isOpen ? "inline-block" : 'hidden'} lg:inline-block w-5 h-5 lg:w-6 lg:h-6 mb-1.5`} src={isDark ? "/png-icon/sun.png" : "/png-icon/moon.png"} alt="theme-icon" />
