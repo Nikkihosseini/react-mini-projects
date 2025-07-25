@@ -6,13 +6,13 @@ export default function Home(){
 
     return(
         <> 
-            <div className="flex flex-col items-center w-screen min-h-screen max-h-screen dark:bg-void-black overflow-hidden bg-crt-white">
+            <div className="relative flex items-center justify-center w-screen min-h-screen dark:bg-void-black bg-crt-white overflow-hidden">
 
-                <div className='flex items-end justify-end w-[90%] mt-8'>
+                <div className='absolute top-5 right-5 flex items-end justify-end w-[90%]'>
                     <ThemeToggleButton/>
                 </div>
                
-                <ul className='flex items-center justify-center min-h-screen flex-col gap-5 text-center -mt-10'>
+                <ul className='flex items-center justify-center flex-col gap-5 text-center -mt-24'>
                         <li>
                             <Link to='/'
                             className="flex items-center justify-center gap-3 font-pixel text-purple-600 border-[3px] border-purple-600 bg-gameboy-green dark:bg-black px-5 py-2 shadow-[4px_4px_0px_rgba(255,229,180,1)] dark:shadow-[4px_4px_0px_rgba(255,255,0,0.5)] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[1px_1px_0px_rgba(255,255,0,0.5)] transition cursor-pointer">Home

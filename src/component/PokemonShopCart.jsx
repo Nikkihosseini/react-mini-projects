@@ -12,7 +12,7 @@ export default function PokemonShopCart(){
     return(
         <>
              <Header />
-      <div className="container mx-auto">
+      <div className="container mx-auto overflow-x-hidden">
         <div className="flex flex-col items-center justify-between gap-y-8 mt-20 md:mt-32 mb-8">
           
               <div className="z-50 w-full">
