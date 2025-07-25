@@ -1,10 +1,29 @@
 import { Link } from "react-router-dom"
-import { useState , useEffect } from "react";
+import { useState , useEffect , useRef} from "react";
 import ThemeToggleButton from './../component/ThemeToggleButton'
 
 export default function Header(){
 
-    const [isOpen , setIsOpen] = useState(false)
+    const menuRef = useRef(null);
+    const [isOpen, setIsOpen] = useState(false);
+
+    useEffect(() => {
+        function handleClickOutside(event) {
+        if (menuRef.current && !menuRef.current.contains(event.target)) {
+         setIsOpen(false);
+        }
+        }
+
+        if (isOpen) {
+         document.addEventListener("mousedown", handleClickOutside);
+        } else {
+         document.removeEventListener("mousedown", handleClickOutside);
+        }
+
+     return () => {
+        document.removeEventListener("mousedown", handleClickOutside);
+         };
+    },  [isOpen]);
 
     function toggleMenu(){
         setIsOpen(prev => !prev)
@@ -58,7 +77,8 @@ export default function Header(){
                     </div>
                 </div>
             {/* Mobile Menu List  */}
-                <div className={`${!isOpen ? "-left-52" : "left-0"} inline-block md:hidden dark:bg-void-black bg-crt-white border-r-2 border-r-neon-blue w-52 fixed top-0 bottom-0 bg-gray-250 px-2 pt-2 z-50`}>
+               {isOpen && (
+                 <div ref={menuRef} className={`${!isOpen ? "-left-52" : "left-0"} inline-block md:hidden dark:bg-void-black bg-crt-white border-r-2 border-r-neon-blue w-52 fixed top-0 bottom-0 bg-gray-250 px-2 pt-2 z-50`}>
                     <h2 className="font-PoppinsBold text-neon-blue text-center tracking-widest text-sm border-b-2 border-b-neon-blue mb-4 w-full pb-2">
                         Projects Archive
                     </h2>
@@ -88,7 +108,7 @@ export default function Header(){
                         </li>
                     </ul>
                 </div>
-           
+               )}
      </>  
     )    
 }
