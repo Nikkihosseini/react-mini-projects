@@ -59,15 +59,16 @@ function loadPokemons() {
   return (
     <>
       <Header />
-      <div className="container mx-auto">
+     <div className="w-screen overflow-x-hidden">
+         <div className="container mx-auto">
         <div className="flex flex-col items-center justify-between gap-y-8 mt-20 md:mt-32 relative mb-8">
           
-              <div className="absolute right-0 left-0 top-0 z-50 w-full">
+              <div className="absolute right-0 left-0 top-0 w-full">
                 <PokemonShopHeader/>
               </div>
 
-              <div className="z-0 mt-16">
-                <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3.5 md:gap-5">
+              <div className="z-0 mt-20 sm:mt-16">
+                <div className="grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3.5 md:gap-5">
                   {pokemonList.map(poke => (
                     <PokemonBox key={poke.id} poke={poke} />
                   ))}
@@ -86,6 +87,7 @@ function loadPokemons() {
   
         </div>
       </div>
+     </div>
     </>
   );
 }

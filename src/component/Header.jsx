@@ -45,7 +45,7 @@ export default function Header(){
            </div>
         </header>
             {/* Mobile Meno */}
-                <div className="flex items-center justify-between md:hidden fixed top-0 right-0 left-0 w-full h-18 z-50 dark:bg-purple-glitch/20 bg-soft-lavender/20 backdrop-blur-md border-b-2 border-b-neon-blue p-2 mx-auto">
+                <div className="flex items-center justify-between md:hidden fixed top-0 right-0 left-0 max-w-screen h-18 z-50 dark:bg-purple-glitch/20 bg-soft-lavender/20 backdrop-blur-md border-b-2 border-b-neon-blue p-2 overflow-x-hidden">
             {/* Mobile Meno Logo */}
                     <div>
                         <h1 className={`${isOpen ? 'hidden' : 'flex'} items-center w-full md:w-[43%] text-sm lg:text-xl tracking-widest uppercase text-sky-cartridge-blue dark:text-retro-mint-green`}>
@@ -65,22 +65,22 @@ export default function Header(){
                     <ul className='flex flex-col gap-8 items-start justify-between text-[12px] xl:text-sm'>
                         <li>
                             <Link to='/'
-                            className="mobile-menu__link flex gap-3 items-center justify-center gap-1mr-4  text-pastel-glitch-purple dark:text-lime-crt-glow hover:text-soft-lavender dark:hover:text-retro-mint-greencursor-pointer">Home
+                            className="mobile-menu__link flex  items-center justify-center gap-1 mr-4  text-pastel-glitch-purple dark:text-lime-crt-glow hover:text-soft-lavender dark:hover:text-retro-mint-greencursor-pointer">Home
                             <img className='inline-block w-5 h-5 xl:w-7 xl:h-7' src="/public/png-icon/sword.png" alt="sword-png"/></Link>
                         </li>
                         <li>
                             <Link to='/Project'
-                            className="mobile-menu__link flex gap-3 items-center justify-center gap-1mr-4 text-pastel-glitch-purple dark:text-lime-crt-glow hover:text-soft-lavender dark:hover:text-retro-mint-greencursor-pointer">Projects
+                            className="mobile-menu__link flex items-center justify-center gap-1 mr-4 text-pastel-glitch-purple dark:text-lime-crt-glow hover:text-soft-lavender dark:hover:text-retro-mint-greencursor-pointer">Projects
                             <img className='inline-block w-5 h-5 xl:w-7 xl:h-7' src="/public/png-icon/star.png" alt="star-png"/></Link>
                         </li>
                         <li>
                             <Link to='/About'
-                            className="mobile-menu__link flex gap-3 items-center justify-center gap-1mr-4 text-pastel-glitch-purple dark:text-lime-crt-glow hover:text-soft-lavender dark:hover:text-retro-mint-greencursor-pointer">About
+                            className="mobile-menu__link flex items-center justify-center gap-1 mr-4 text-pastel-glitch-purple dark:text-lime-crt-glow hover:text-soft-lavender dark:hover:text-retro-mint-greencursor-pointer">About
                             <img className='inline-block w-5 h-5 xl:w-7 xl:h-7' src="/public/png-icon/heart.png" alt="heart-png"/></Link>
                         </li>
                         <li>
                             <Link to='/Contact'
-                            className="mobile-menu__link flex gap-3 items-center justify-center gap-1mr-4 text-pastel-glitch-purple dark:text-lime-crt-glow hover:text-soft-lavender dark:hover:text-retro-mint-greencursor-pointer">Contact
+                            className="mobile-menu__link flex items-center justify-center gap-1 mr-4 text-pastel-glitch-purple dark:text-lime-crt-glow hover:text-soft-lavender dark:hover:text-retro-mint-greencursor-pointer">Contact
                             <img className='inline-block w-5 h-5 xl:w-7 xl:h-7' src="/public/png-icon/chat.png" alt="chat-png"/></Link>
                         </li>
                         <li className="mobile-menu__link flex items-center justify-center gap-1 text-pastel-glitch-purple dark:text-lime-crt-glow hover:text-soft-lavender dark:hover:text-retro-mint-green cursor-pointer">

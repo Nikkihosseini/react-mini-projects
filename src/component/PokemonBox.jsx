@@ -15,10 +15,10 @@ export default function PokemonBox({poke}){
     
     return(
         <>
-            <div className="flex flex-col items-center justify-between bg-transparent backdrop-blur-md border-2 border-neon-blue uppercase text-retro-mint-green p-1 w-full z-0">
+            <div className="flex flex-col items-center justify-between bg-transparent backdrop-blur-md border-2 border-neon-blue uppercase text-retro-mint-green p-1 w-auto xs:w-full z-0">
 
                <div className="w-full">
-                    <h2 className="text-2xl text-left w-full line-clamp-1">{poke.name}</h2>
+                    <h2 className="text-lg md:text-2xl text-left w-full line-clamp-1">{poke.name}</h2>
                    <div className="w-full aspect-square max-w-sm">
                         <img
                             className="w-full h-full object-contain bg-retro-mint-green/50"
@@ -34,11 +34,11 @@ export default function PokemonBox({poke}){
                     </div>
                     <div className="mt-1 text-sm text-left">
                         <span className='inline-block'>SEC CODE:</span>
-                        <span className='inline-block transition-all'>{uuid.slice(0 , 6)}</span>
+                        <span className='inline-block transition-all text-retro-mint-green/50'>{uuid.slice(0 , 6)}</span>
                     </div>
                     <div>
                         <span className='block text-[13px]'>ATTACK POWER:</span>
-                        <span className='block'>{poke?.stats?.[0]?.base_stat || "Loading..."} {uuid.slice(0 , 2)}</span>
+                        <span className='block text-retro-mint-green/50'>{poke?.stats?.[0]?.base_stat || "Loading..."} {uuid.slice(0 , 2)}</span>
                     </div>
                 </div>
                <div className="flex items-center justify-center mt-1 w-full text-retro-mint-green bg-neon-blue/10 hover:bg-neon-blue/20 transition-all">
