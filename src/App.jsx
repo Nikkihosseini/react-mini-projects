@@ -6,10 +6,12 @@ import PokemonShop from './Pages/Project/PokemonShop'
 import PokemonShopCart from './component/PokemonShopCart'
 import {CartProvider} from './component/context/CartContext'
 import { BrowserRouter as Router , Routes , Route } from 'react-router-dom'
+
 import './index.css'
 
 
 export default function App() {
+
   return (
     <>
       <CartProvider>
