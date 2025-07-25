@@ -63,6 +63,9 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
+#root {
+  @apply flex items-center justify-center min-h-screen mx-auto;
+}
 
 .line{
   display: none;

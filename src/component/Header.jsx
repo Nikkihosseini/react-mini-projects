@@ -45,7 +45,7 @@ export default function Header(){
            </div>
         </header>
             {/* Mobile Meno */}
-                <div className="flex items-center justify-between md:hidden fixed right-0 left-0 w-full h-18 z-50 dark:bg-purple-glitch/20 bg-soft-lavender/20 backdrop-blur-md border-b-2 border-b-neon-blue p-2 mx-auto">
+                <div className="flex items-center justify-between md:hidden fixed top-0 right-0 left-0 w-full h-18 z-50 dark:bg-purple-glitch/20 bg-soft-lavender/20 backdrop-blur-md border-b-2 border-b-neon-blue p-2 mx-auto">
             {/* Mobile Meno Logo */}
                     <div>
                         <h1 className={`${isOpen ? 'hidden' : 'flex'} items-center w-full md:w-[43%] text-sm lg:text-xl tracking-widest uppercase text-sky-cartridge-blue dark:text-retro-mint-green`}>

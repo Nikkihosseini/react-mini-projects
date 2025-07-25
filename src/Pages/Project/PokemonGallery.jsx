@@ -39,14 +39,14 @@ export default function PokemonGallery(){
     console.log(pokemonData)
     
     if (!pokemonData || !pokemonData.sprites || !description) {
-        return <div className="text-center mt-20 text-neon-blue dark:text-white">Loading...</div>;
+        return <div className="flex items-center justify-center text-center mt-20 text-neon-blue dark:text-white">Loading...</div>;
     }
     
     return(
         <>
             <Header/>
-            <div className='container flex items-center justify-center min-h-screen'>
-                <div className='flex flex-col items-center justify-between mt-0 sm:mt-12 md:mt-28 w-[324px] sm:w-[460px] h-auto border-2 border-neon-blue bg-transparent backdrop-blur-md text-retro-mint-green uppercase overflow-hidden'>
+                <div className='container mx-auto'>
+                <div className='flex flex-col items-center justify-between mt-0 sm:mt-12 md:mt-28 w-[300px] sm:w-[460px] h-auto border-2 border-neon-blue bg-transparent backdrop-blur-md text-retro-mint-green uppercase overflow-hidden'>
             <div className='flex items-start justify-between w-full border-b-2 border-b-neon-blue p-2 px-1'>
                 <h1 className='text-retro-mint-green text-[25px] md:text-[35px] text-left mt-1'>POKEMON</h1>
                <div className='text-[10px] text-right dark:opacity-40'>
@@ -64,9 +64,9 @@ export default function PokemonGallery(){
                     <span className='block'>*************</span>
                 </div>
             </div>
-            <div className='flex items-center justify-between h-auto sm:h-[227px] w-full border-b-2 border-b-neon-blue'>
-                <div className='basis-[60%] h-full p-1 border-r-2 border-r-neon-blue overflow-hiddenborder-void-black'>
-                    <img className='inline-block w-full h-full object-cover  bg-retro-mint-green/70' src={`${pokemonData.sprites ? pokemonData.sprites.front_default : `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemonId}.png`}`} alt="POKEMON.pic"/>
+            <div className='flex items-stretch justify-between h-[180px] sm:h-[227px] w-full border-b-2 border-b-neon-blue divide-x-2 divide-neon-blue'>
+                <div className='basis-[60%] h-full overflow-hidden border-void-black'>
+                    <img className='block w-full h-full object-cover bg-retro-mint-green/70' src={`${pokemonData.sprites ? pokemonData.sprites.front_default : `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemonId}.png`}`} alt="POKEMON.pic"/>
                 </div>
                 <div className='flex flex-col justify-start items-start gap-2 h-full basis-[40%] p-1 text-[10px]'>
                     <div className='flex items-start justify-between w-full'>
