@@ -63,7 +63,7 @@ button:focus-visible {
 }
 
 #root {
-  @apply flex items-center justify-center overflow-hidden;
+  @apply w-full flex items-center justify-center overflow-hidden;
 }
 
 .line{

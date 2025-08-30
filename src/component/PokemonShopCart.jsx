@@ -2,39 +2,40 @@ import Header from "./Header"
 import PokemonShopHeader from "./PokemonShopHeader"
 import {useContext } from "react";
 import {CartContext} from "../component/context/CartContext"
+import PokemonBox from "./PokemonBoxCart";
 
 
 export default function PokemonShopCart(){
 
     const {removeFromCart , cartItems} = useContext(CartContext);
 
+    console.log(cartItems)
+
 
     return(
         <>
-             <Header />
-      <div className="container mx-auto overflow-x-hidden">
-        <div className="flex flex-col items-center justify-between gap-y-8 mt-20 md:mt-32 mb-8">
-          
-              <div className="z-50 w-full">
-                <PokemonShopHeader/>
-              </div>
+        <Header />
+        <div className="w-screen overflow-x-hidden mt-36 mb-10">
+          {/* PokemonShopHeader */}
+            <div className="flex items-center justify-center fixed right-0 left-0 mx-auto top-20 md:top-36 z-50">
+              <PokemonShopHeader/>
+            </div>
+          <div className="container mx-auto">
 
-              <div className="flex flex-col items-center justify-between bg-transparent backdrop-blur-md border-2 border-neon-blue uppercase text-retro-mint-green p-1 w-full">
-
-                            <div className="w-full">
-                                <h2 className="text-2xl text-left w-full line-clamp-1"></h2>
-                                <div className="w-full aspect-square max-w-sm">
-                                    <img
-                                    className="w-full h-full object-contain bg-retro-mint-green/50"
-                                    alt="pokemon"
-                                    />
-                                </div>
-                            </div>
-              
+            <div className="flex items-center justify-center">
+        
+                    <div className="flex items-start justify-start mt-5 md:mt-20">
+                        {/* Pokemon Shop Items */}
+                        <div className="grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3.5 md:gap-10">
+                          {cartItems.map(poke => (
+                            <PokemonBox key={poke.id} poke={poke} />
+                          ))}
                         </div>
-  
+                    </div>
+
+            </div>
+          </div>
         </div>
-      </div>
         </>
     )
 }
