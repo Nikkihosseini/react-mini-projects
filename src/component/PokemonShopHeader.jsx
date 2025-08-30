@@ -12,7 +12,7 @@ export default function PokemonShopHeader(){
 
     return(
         <>
-           <div className="container mx-auto">
+           <div className="container">
                 <div className="flex items-center justify-between w-full border-2 border-neon-blue uppercase text-retro-mint-green p-2 mx-auto dark:bg-purple-glitch/20 bg-soft-lavender/20 backdrop-blur-md z-40">
                     <h1 className="text-sm xs:text-base sm:text-3xl">Pokemon Shop</h1>
                     <div className="flex items-center justify-end w-36 text-left">
