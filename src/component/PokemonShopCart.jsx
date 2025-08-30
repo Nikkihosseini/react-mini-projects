@@ -25,6 +25,7 @@ export default function PokemonShopCart(){
             <div className="flex items-center justify-center">
         
                     <div className="flex items-start justify-start mt-5 md:mt-20">
+                        {/* Pokemon Shop Items */}
                         <div className="grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3.5 md:gap-10">
                           {cartItems.map(poke => (
                             <PokemonBox key={poke.id} poke={poke} />
