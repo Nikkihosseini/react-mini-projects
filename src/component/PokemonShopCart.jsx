@@ -16,6 +16,7 @@ export default function PokemonShopCart(){
         <>
         <Header />
         <div className="w-screen overflow-x-hidden">
+          {/* PokemonShopHeader */}
             <div className="fixed right-0 left-0 mx-auto top-20 md:top-36 z-50">
               <PokemonShopHeader/>
             </div>
