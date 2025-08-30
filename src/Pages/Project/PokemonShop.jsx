@@ -53,40 +53,42 @@ function loadPokemons() {
     });
 }
 
-
-
-
   return (
     <>
       <Header />
-     <div className="w-screen overflow-x-hidden">
-         <div className="container mx-auto">
-        <div className="flex flex-col items-center justify-between gap-y-8 mt-20 md:mt-32 relative mb-8">
-          
-              <div className="absolute right-0 left-0 top-0 w-full">
-                <PokemonShopHeader/>
-              </div>
+     <div className="w-screen overflow-x-hidden mt-36">
 
-              <div className="z-0 mt-20 sm:mt-16">
-                <div className="grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3.5 md:gap-5">
-                  {pokemonList.map(poke => (
-                    <PokemonBox key={poke.id} poke={poke} />
-                  ))}
-                </div>
-              </div>
+     <div className="fixed right-0 left-0 mx-auto top-20 md:top-36 z-50">
+       <PokemonShopHeader/>
+     </div>
 
-              <div className="flex justify-center">
-                  <button
-                  onClick={loadPokemons}
-                  disabled={loading}
-                  className="px-4 py-2 text-retro-mint-green bg-neon-blue/10 hover:bg-neon-blue/20 transition-all       outline-none border-none focus:outline-none"
-                  >
-                  {loading ? "Loading..." : "Show More"}
-                  </button>
+        <div className="container mx-auto">
+
+            <div className="flex justify-center items-center flex-col gap-5 mt-5 md:mt-20 mx-auto">
+
+              <div className="flex items-center justify-center">
+              
+              <div className="grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3.5 md:gap-10">
+                {pokemonList.map(poke => (
+                  <PokemonBox key={poke.id} poke={poke} />
+                ))}
               </div>
-  
+      
+            </div>
+            <div className="flex justify-center mb-5">
+                <button
+                onClick={loadPokemons}
+                disabled={loading}
+                className="px-4 py-2 text-retro-mint-green bg-neon-blue/10 hover:bg-neon-blue/20 transition-all outline-none border-none focus:outline-none"
+                >
+                {loading ? "Loading..." : "Show More"}
+                </button>
+            </div>
+
+            </div>
+    
         </div>
-      </div>
+
      </div>
     </>
   );
