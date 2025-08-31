@@ -57,7 +57,7 @@ function loadPokemons() {
     <>
       <Header />
 
-      <div className="flex items-center justify-center fixed right-0 left-0 top-20 md:top-36 z-50">
+      <div className="flex items-center justify-center fixed right-0 left-0 top-20 md:top-36 z-40">
        <PokemonShopHeader/>
       </div>
 

@@ -17,7 +17,7 @@ export default function PokemonShopCart(){
         <Header />
         <div className="w-screen overflow-x-hidden mt-36 mb-10">
           {/* PokemonShopHeader */}
-            <div className="flex items-center justify-center fixed right-0 left-0 mx-auto top-20 md:top-36 z-50">
+            <div className="flex items-center justify-center fixed right-0 left-0 mx-auto top-20 md:top-36 z-40">
               <PokemonShopHeader/>
             </div>
           <div className="container mx-auto">

@@ -5,25 +5,26 @@ import ThemeToggleButton from './../component/ThemeToggleButton'
 export default function Header(){
 
     const menuRef = useRef(null);
+    const hamburgerRef = useRef(null);
     const [isOpen, setIsOpen] = useState(false);
 
-    useEffect(() => {
-        function handleClickOutside(event) {
-        if (menuRef.current && !menuRef.current.contains(event.target)) {
-         setIsOpen(false);
+  useEffect(() => {
+  function handleClickOutside(event) {
+
+        if (
+          menuRef.current && 
+          !menuRef.current.contains(event.target) &&
+          !hamburgerRef.current.contains(event.target)
+        ) {
+          setIsOpen(false);
         }
         }
 
-        if (isOpen) {
-         document.addEventListener("mousedown", handleClickOutside);
-        } else {
-         document.removeEventListener("mousedown", handleClickOutside);
-        }
-
-     return () => {
-        document.removeEventListener("mousedown", handleClickOutside);
-         };
-    },  [isOpen]);
+      document.addEventListener("click", handleClickOutside);
+          return () => {
+      document.removeEventListener("click", handleClickOutside);
+        };
+    }, []);
 
     function toggleMenu(){
         setIsOpen(prev => !prev)
@@ -72,8 +73,9 @@ export default function Header(){
                     </h1>
                     </div>
             {/* Mobile Hamburger Menu */}
-                    <div onClick={toggleMenu} className={`flex items-center justify-center cursor-pointer overflow-hidden w-10 h-10 ${isOpen ? 'active' : ''}`}>
-                        <span className="hamburger-line"></span>
+             
+                    <div ref={hamburgerRef} onClick={toggleMenu} className={`flex items-center justify-center cursor-pointer overflow-hidden w-10 h-10 z-50 ${isOpen ? 'active' : ''}`}>
+                        <span className="hamburger-line z-50"></span>
                     </div>
                 </div>
             {/* Mobile Menu List  */}
