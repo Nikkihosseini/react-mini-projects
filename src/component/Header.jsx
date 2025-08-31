@@ -14,6 +14,8 @@ export default function Header(){
         if (
           menuRef.current && 
           !menuRef.current.contains(event.target) &&
+        // Added useRef(hamburgerRef) for the hamburger button and excluded it from handleClickOutside
+        // checks. Now clicking the hamburger correctly toggles the mobile menu.
           !hamburgerRef.current.contains(event.target)
         ) {
           setIsOpen(false);
