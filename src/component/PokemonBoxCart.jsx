@@ -1,12 +1,12 @@
 import { useState , useEffect , useContext } from "react";
-import {CartContext} from "../component/context/CartContext"
+import {CartContext} from "./context/CartContext"
 
 
 
-export default function PokemonBox({poke}){
+export default function PokemonBoxCart({poke}){
 
       const [uuid, setUuid] = useState(crypto.randomUUID());
-      const {addToCart} = useContext(CartContext);
+      const {addToCart, decreaseQuantity} = useContext(CartContext);
 
         useEffect(() => {
         setUuid(crypto.randomUUID());
@@ -40,15 +40,10 @@ export default function PokemonBox({poke}){
                         <span className='block text-retro-mint-green/50'>{poke?.stats?.[0]?.base_stat || "Loading..."} {uuid.slice(0 , 2)}</span>
                     </div>
                 </div>
-               <div className="flex items-center justify-center mt-1 w-full text-retro-mint-green bg-neon-blue/10 hover:bg-neon-blue/20 transition-all">
-                <button onClick={()=> addToCart(poke)} className="w-full bg-transparent outline-none border-none focus:outline-none">َ
-                    <span className="hidden sm:inline-block">
-                        ADD POKEMON
-                    </span>
-                    <span className="inline-block sm:hidden">
-                        ADD
-                    </span>
-                </button>
+               <div className="flex items-center justify-between mt-1 w-full">
+                    <button onClick={() => decreaseQuantity(poke.id)} className=" text-retro-mint-green bg-neon-blue/10 hover:bg-neon-blue/20 transition-all">-</button>
+                    <span>{poke.quantity}</span>
+                    <button onClick={() => addToCart(poke)} className=" text-retro-mint-green bg-neon-blue/10 hover:bg-neon-blue/20 transition-all">+</button>
                </div>
             </div>
         </>
