@@ -13,13 +13,15 @@ export default function UserCard(){
         .get("https://jsonplaceholder.typicode.com/users")
         .then((res) => setNewUserList(res.data))
         .catch((error) => console.error("خطا در گرفتن کاربران:", error));
+        console.log(newUserList)
     }, []);
 
 
     return (
         <>
             <Header/>
-            <AddNewUser 
+           <div className="flex flex-col justify-center items-center">
+             <AddNewUser 
                 newUserList={newUserList}
                 setNewUserList={setNewUserList}
             />
@@ -28,6 +30,7 @@ export default function UserCard(){
              {newUserList.map(user =>(
                <User key={user.id} user={user} newUserList={newUserList} setNewUserList={setNewUserList} />
             ))}
+           </div>
            </div>
         </>
     )
