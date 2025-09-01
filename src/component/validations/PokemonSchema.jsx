@@ -7,5 +7,7 @@ export const pokemonSchema = yup.object().shape({
     .typeError("Quantity must be a number")
     .positive("Quantity must be greater than 0")
     .integer("Quantity must be an integer")
-    .required("Quantity is required"),
+    .required("Quantity is required")
+    .min(1)
+    .max(999)
 });

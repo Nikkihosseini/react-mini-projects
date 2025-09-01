@@ -7,7 +7,7 @@ import PokemonBox from "./PokemonBoxCart";
 
 export default function PokemonShopCart(){
 
-    const {removeFromCart , cartItems} = useContext(CartContext);
+    const {cartItems} = useContext(CartContext);
 
     console.log(cartItems)
 
