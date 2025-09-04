@@ -61,7 +61,6 @@ function loadPokemons() {
        <PokemonShopHeader/>
       </div>
 
-      
         <div className="container mt-36 mx-auto">
           <div className="flex justify-center items-center flex-col gap-y-5 mt-5 md:mt-20">
            
