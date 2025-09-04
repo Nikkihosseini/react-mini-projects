@@ -35,6 +35,7 @@ export default function PokemonSearch() {
         {...register("name")}
         className="h-9 p-2 text-xs w-32 focus:border-none focus:outline-none bg-retro-mint-green/90 focus:!bg-retro-mint-green/90 text-crt-white placeholder-crt-white"
       />
+      
       {errors.name && <ErrorModal message={errors.name.message} />}
 
       <input
