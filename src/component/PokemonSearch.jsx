@@ -18,10 +18,7 @@ export default function PokemonSearch() {
 
         const pokemonData = res.data;
        
-        addToCart({
-          ...pokemonData,
-          quantity: Number(data.quantity),
-        });
+       addToCart(pokemonData, Number(data.quantity));
         reset(); 
       }
     } catch (err) {
