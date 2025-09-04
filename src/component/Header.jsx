@@ -34,7 +34,7 @@ export default function Header(){
 
     return(
      <>
-        <header className="hidden md:flex fixed top-8 right-0 left-0 w-[90%] h-20 z-50 dark:bg-purple-glitch/20 bg-soft-lavender/20 backdrop-blur-md border-4 border-neon-blue p-3 mx-auto">
+        <header className="hidden md:flex fixed top-8 right-0 left-0 w-[90%] h-20 z-40 dark:bg-purple-glitch/20 bg-soft-lavender/20 backdrop-blur-md border-4 border-neon-blue p-3 mx-auto">
            <div className="flex items-center justify-between h-full w-full">
                 <h1 className="flex items-center w-full md:w-[43%] text-sm lg:text-xl tracking-widest uppercase text-sky-cartridge-blue dark:text-retro-mint-green">
                 <span className="hidden xl:inline-block w-6 h-6 xl:w-7 xl:h-7 mb-2 mr-1">🕹️</span>Projects Archive

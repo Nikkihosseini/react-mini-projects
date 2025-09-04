@@ -4,6 +4,7 @@ import axios from "axios";
 import  {pokemonSchema}  from "./validations/PokemonSchema"; 
 import {useContext } from "react";
 import {CartContext} from "./context/CartContext"
+import ErrorModal from './Modal/ErrorModal'
 
 export default function PokemonSearch() {
 
@@ -22,7 +23,7 @@ export default function PokemonSearch() {
         reset(); 
       }
     } catch (err) {
-      alert("Pokemon not found!");
+      <ErrorModal message="Pokemon not found!"/>
     }
   };
 
@@ -32,17 +33,18 @@ export default function PokemonSearch() {
         type="text"
         placeholder="Name"
         {...register("name")}
-        className="h-9 p-2 text-xs w-32 focus:border-none focus:outline-none bg-retro-mint-green/90 text-crt-white placeholder-crt-white"
+        className="h-9 p-2 text-xs w-32 focus:border-none focus:outline-none bg-retro-mint-green/90 focus:!bg-retro-mint-green/90 text-crt-white placeholder-crt-white"
       />
-      {/* {errors.name && <p className="text-red-500 text-sm">{errors.name.message}</p>} */}
+      {errors.name && <ErrorModal message={errors.name.message} />}
 
       <input
         type="number"
         placeholder="Num"
         {...register("quantity")}
-        className="h-9 p-2 text-xs w-16 focus:border-none focus:outline-none bg-retro-mint-green/90 text-crt-white placeholder-crt-white"
+        className="h-9 p-2 text-xs w-16 focus:border-none focus:outline-none bg-retro-mint-green/90 focus:bg-retro-mint-green/90 text-crt-white placeholder-crt-white"
       />
-      {/* {errors.quantity && <p className="text-red-500 text-sm">{errors.quantity.message}</p>} */}
+      
+       {errors.quantity && <ErrorModal message={errors.quantity.message} />}
 
       <button type="submit" className="h-9 text-xs bg-retro-mint-green text-crt-white rounded-none focus:border-none focus:outline-none">
         Add
