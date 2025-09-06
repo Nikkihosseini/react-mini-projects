@@ -15,7 +15,7 @@ export default function PokemonShopHeader(){
         <>
            <div className="container">
                 <div className="flex items-center justify-between w-full border-2 border-neon-blue uppercase text-retro-mint-green p-2 mx-auto dark:bg-purple-glitch/20 bg-soft-lavender/20 backdrop-blur-md z-40">
-                    <h1 className="text-sm xs:text-base sm:text-3xl">Shop</h1>
+                    <h1 onClick={()=> navigate("/PokemonShop")} className="text-sm xs:text-base sm:text-3xl cursor-pointer">Shop</h1>
                     <div className="flex items-center justify-end  text-left gap-x-5 md:gap-x-10">
                        <div>
                         <PokemonSearch/>
