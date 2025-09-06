@@ -1,14 +1,19 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import axios from "axios";
 import PokemonBox from "../../component/PokemonBox";
 import Header from "../../component/Header";
 import PokemonShopHeader from "../../component/PokemonShopHeader"
+import SuccessModal from "../../component/Modal/SuccessModal"
+import { CartContext } from "../../component/context/CartContext";
 
 export default function PokemonShop() {
+
+  const{addToCart} = useContext(CartContext)
 
   const [pokemonList, setPokemonList] = useState([]);
   const [offset, setOffset] = useState(0);
   const [loading, setLoading] = useState(false);
+  const [message, setMessage] = useState(""); 
   const limit = 10;
 
   useEffect(() => {
@@ -51,12 +56,19 @@ function loadPokemons() {
       alert("Oops! Failed to load the initial list of Pokémons.");
       setLoading(false);
     });
+
+  };
+
+
+function handleAddToCart(poke){
+  const msg = addToCart(poke , 1);
+  setMessage(msg);
+  setTimeout(() => setMessage(''), 3000);
 }
 
   return (
     <>
       <Header />
-
       <div className="flex items-center justify-center fixed right-0 left-0 top-20 md:top-36 z-40">
        <PokemonShopHeader/>
       </div>
@@ -66,7 +78,7 @@ function loadPokemons() {
            
               <div className="grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3.5 md:gap-10">
                 {pokemonList.map(poke => (
-                  <PokemonBox key={poke.id} poke={poke}/>
+                  <PokemonBox key={poke.id} poke={poke} onAdd={() => handleAddToCart(poke)}/>
                 ))}
               </div>
 
@@ -82,6 +94,9 @@ function loadPokemons() {
 
           </div>
         </div>
+
+         {message && <SuccessModal message={message} top='top-14'/>}
+  
     </>
   );
 }

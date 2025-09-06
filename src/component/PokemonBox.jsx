@@ -3,7 +3,7 @@ import {CartContext} from "../component/context/CartContext"
 
 
 
-export default function PokemonBox({poke}){
+export default function PokemonBox({poke , onAdd}){
 
       const [uuid, setUuid] = useState(crypto.randomUUID());
       const {addToCart} = useContext(CartContext);
@@ -41,7 +41,7 @@ export default function PokemonBox({poke}){
                     </div>
                 </div>
                <div className="flex items-center justify-center mt-1 w-full text-retro-mint-green bg-neon-blue/10 hover:bg-neon-blue/20 transition-all">
-                <button onClick={()=> addToCart(poke)} className="w-full bg-transparent outline-none border-none focus:outline-none">َ
+                <button onClick={onAdd} className="w-full bg-transparent outline-none border-none focus:outline-none">َ
                     <span className="hidden sm:inline-block">
                         ADD POKEMON
                     </span>

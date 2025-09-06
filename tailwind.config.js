@@ -32,7 +32,8 @@ module.exports = {
         "peach-fuzz": "#FFE5B4",        // هلویی روشن و نوستالژیک
         "sky-cartridge-blue": "#A3D2FF", // آبی کمرنگ مثل لیبل‌ بازی‌های کارتریجی
         "pastel-glitch-purple": "#D1A3FF", // ترکیب بنفش-پاستلی که حس فانتزی پیکسلی داره
-        "warm-glow-yellow": "#FFF8C5"   // زرد خیلی لطیف، مثل نور لامپ زرد قدیمی
+        "warm-glow-yellow": "#FFF8C5",  // زرد خیلی لطیف، مثل نور لامپ زرد قدیمی
+        "retro-green": "#16a34a",
       },
       container: {
       center: true,
