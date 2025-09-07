@@ -41,12 +41,12 @@ export default function PokemonSearch() {
 
   return (
     <>
-      <form onSubmit={handleSubmit(onSubmit)} className="flex items-center gap-x-1">
+      <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col md:flex-row items-center gap-y-1 md:gap-x-1 z-50">
         <input
           type="text"
           placeholder="Name"
           {...register("name")}
-          className="h-9 p-2 text-xs w-32 focus:border-none focus:outline-none bg-retro-mint-green/90 focus:!bg-retro-mint-green/90 text-crt-white placeholder-crt-white"
+          className="h-9 p-2 text-xs w-full md:w-36 focus:border-none focus:outline-none bg-retro-mint-green focus:!bg-retro-mint-green text-crt-white placeholder-crt-white"
         />
 
         {errors.name && <ErrorModal message={errors.name.message} />}
@@ -55,14 +55,14 @@ export default function PokemonSearch() {
           type="number"
           placeholder="Num"
           {...register("quantity")}
-          className="h-9 p-2 text-xs w-16 focus:border-none focus:outline-none bg-retro-mint-green/90 focus:bg-retro-mint-green/90 text-crt-white placeholder-crt-white"
+          className="h-9 p-2 text-xs w-full md:w-16 focus:border-none focus:outline-none bg-retro-mint-green focus:bg-retro-mint-green text-crt-white placeholder-crt-white"
         />
 
         {errors.quantity && <ErrorModal message={errors.quantity.message} />}
 
         <button
           type="submit"
-          className="h-9 text-xs bg-retro-mint-green text-crt-white rounded-none focus:border-none focus:outline-none"
+          className="h-9 w-full md:w-auto text-xs bg-retro-mint-green text-crt-white rounded-none border-[3px] border-neon-blue"
         >
           Add
         </button>
