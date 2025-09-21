@@ -90,22 +90,22 @@ export default function Header(){
                         <li>
                             <Link to='/'
                             className="flex items-center justify-center gap-1 mr-4  text-pastel-glitch-purple dark:text-lime-crt-glow hover:text-soft-lavender dark:hover:text-retro-mint-greencursor-pointer">Home
-                            <img className='inline-block w-5 h-5 xl:w-7 xl:h-7' src="/public/png-icon/sword.png" alt="sword-png"/></Link>
+                            <img className='inline-block w-5 h-5 xl:w-7 xl:h-7' src="/png-icon/sword.png" alt="sword-png"/></Link>
                         </li>
                         <li>
                             <Link to='/Project'
                             className="flex items-center justify-center gap-1 mr-4 text-pastel-glitch-purple dark:text-lime-crt-glow hover:text-soft-lavender dark:hover:text-retro-mint-greencursor-pointer">Projects
-                            <img className='inline-block w-5 h-5 xl:w-7 xl:h-7' src="/public/png-icon/star.png" alt="star-png"/></Link>
+                            <img className='inline-block w-5 h-5 xl:w-7 xl:h-7' src="/png-icon/star.png" alt="star-png"/></Link>
                         </li>
                         <li>
                             <Link to='/About'
                             className="flex items-center justify-center gap-1 mr-4 text-pastel-glitch-purple dark:text-lime-crt-glow hover:text-soft-lavender dark:hover:text-retro-mint-greencursor-pointer">About
-                            <img className='inline-block w-5 h-5 xl:w-7 xl:h-7' src="/public/png-icon/heart.png" alt="heart-png"/></Link>
+                            <img className='inline-block w-5 h-5 xl:w-7 xl:h-7' src="/png-icon/heart.png" alt="heart-png"/></Link>
                         </li>
                         <li>
                             <Link to='/Contact'
                             className="flex items-center justify-center gap-1 mr-4 text-pastel-glitch-purple dark:text-lime-crt-glow hover:text-soft-lavender dark:hover:text-retro-mint-greencursor-pointer">Contact
-                            <img className='inline-block w-5 h-5 xl:w-7 xl:h-7' src="/public/png-icon/chat.png" alt="chat-png"/></Link>
+                            <img className='inline-block w-5 h-5 xl:w-7 xl:h-7' src="/png-icon/chat.png" alt="chat-png"/></Link>
                         </li>
                         <li className="flex items-center justify-center gap-1 text-pastel-glitch-purple dark:text-lime-crt-glow hover:text-soft-lavender dark:hover:text-retro-mint-green cursor-pointer">
                                 <ThemeToggleButton isOpen={isOpen}/>
