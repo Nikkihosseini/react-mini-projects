@@ -2,6 +2,10 @@
 
 A collection of small React JS projects built for practice, learning, and portfolio development 🎯  
 Each project focuses on a specific React concept such as props, state, conditional rendering, hooks & ... .
+---
+
+## Quick access:
+https://reactpokemonproject.netlify.app/
 
 ---
 
