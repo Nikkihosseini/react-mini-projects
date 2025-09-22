@@ -27,8 +27,8 @@ export default function App() {
             <Route path='/PokemonShop' element={<PokemonShop/>} />
             <Route path='/PokemonShopCart' element={<PokemonShopCart/>} />
             <Route path='/PokemonSearch' element={<PokemonSearch/>} />
-            <Route path='*' element={<div className='flex items-center justify-center mt-30 bg-crt-white dark:bg-void-black overflow-hidden'>
-            <img className='inline-block max-w-52 max-h-52' src="/png-icon/error.png" alt="error-png"/>
+            <Route path='*' element={<div className='flex items-center justify-center h-screen bg-crt-white dark:bg-void-black overflow-hidden'>
+            <img className='inline-block max-w-40 max-h-40' src="/png-icon/error.png" alt="error-png"/>
             </div>} />
           </Routes>
         </Router>
