@@ -27,9 +27,9 @@ export default function App() {
             <Route path='/PokemonShop' element={<PokemonShop/>} />
             <Route path='/PokemonShopCart' element={<PokemonShopCart/>} />
             <Route path='/PokemonSearch' element={<PokemonSearch/>} />
-            <Route path='*' element={<div className='flex flex-col items-center justify-center gap-2 mt-30 text-5xl font-pixel min-h-screen text-glitch-red bg-crt-white dark:bg-void-black w-screen'>
-            <img className='inline-block max-w-52  max-h-52' src="/png-icon/error.png" alt="error-png"/>
-            Page Not Found !</div>} />
+            <Route path='*' element={<div className='flex items-center justify-center mt-30 bg-crt-white dark:bg-void-black'>
+            <img className='inline-block max-w-52 max-h-52' src="/png-icon/error.png" alt="error-png"/>
+            </div>} />
           </Routes>
         </Router>
       </CartProvider>
