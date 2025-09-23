@@ -1,5 +1,6 @@
-import {Link} from 'react-router-dom'
 import ThemeToggleButton from  './../component/ThemeToggleButton'
+import Footer from "./Footer"
+import {Link} from 'react-router-dom'
 
 
 export default function Home(){
@@ -10,6 +11,10 @@ export default function Home(){
 
                 <div className='absolute top-5 right-5 flex items-end justify-end w-[90%]'>
                     <ThemeToggleButton/>
+                </div>
+
+                <div className='flex items-center justify-center absolute bottom-0 left-0 right-0 mx-auto mb-3'>
+                    <Footer/>
                 </div>
                
                 <ul className='flex items-center justify-center flex-col gap-5 text-center -mt-24'>

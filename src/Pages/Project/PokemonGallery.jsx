@@ -45,6 +45,7 @@ export default function PokemonGallery(){
     return(
         <>
             <Header/>
+            
             <div className='flex justify-center items-center'>
                  <div className='container mx-auto'>
                     <div className='flex flex-col items-center justify-between mt-0 sm:mt-12 md:mt-28 w-[300px] sm:w-[460px] h-auto border-2 border-neon-blue bg-transparent backdrop-blur-md text-retro-mint-green uppercase overflow-hidden'>

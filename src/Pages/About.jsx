@@ -1,11 +1,17 @@
 import ThemeToggleButton from  './../component/ThemeToggleButton'
+import Footer from "./Footer"
 
 export default function About() {
   return (
   <>
       <div className="relative flex items-center justify-center w-screen min-h-screen dark:bg-void-black bg-crt-white overflow-hidden">
+
          <div className='absolute top-5 right-5 flex items-end justify-end w-[90%]'>
             <ThemeToggleButton/>
+        </div>
+
+        <div className='flex items-center justify-center absolute bottom-0 left-0 right-0 mx-auto mb-3'>
+            <Footer/>
         </div>
                
         <div className="flex flex-col items-center justify-center  min-h-screen text-center p-6">
