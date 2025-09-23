@@ -44,6 +44,7 @@ export default function PokemonSearch() {
       <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col md:flex-row items-center gap-y-1 md:gap-x-1 z-50">
         <input
           type="text"
+          name="name"
           placeholder="Name"
           {...register("name")}
           className="h-9 p-2 text-xs w-full md:w-36 focus:border-none focus:outline-none bg-retro-mint-green focus:!bg-retro-mint-green text-crt-white placeholder-crt-white"
@@ -53,6 +54,7 @@ export default function PokemonSearch() {
 
         <input
           type="number"
+          name="quantity"
           placeholder="Num"
           {...register("quantity")}
           className="h-9 p-2 text-xs w-full md:w-16 focus:border-none focus:outline-none bg-retro-mint-green focus:bg-retro-mint-green text-crt-white placeholder-crt-white"
