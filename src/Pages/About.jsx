@@ -14,7 +14,7 @@ export default function About() {
             <Footer/>
         </div>
                
-        <div className="flex flex-col items-center justify-center min-h-screen text-center px-3 text-pastel-glitch-purple">
+        <div className="flex flex-col items-center justify-center text-center px-3 text-pastel-glitch-purple">
             <h1 className="text-sm sm:text-xl md:text-4xl font-bold mb-6 w-full">About This Project!</h1>
             <span className='border-2 border-dashed w-full border-vintage-rose mb-4'></span>
              <p className="max-w-xl text-xs md:text-lg leading-relaxed mb-6">

@@ -6,6 +6,7 @@ import PokemonShop from './Pages/Project/PokemonShop'
 import PokemonShopCart from './component/PokemonShopCart'
 import PokemonSearch from "./component/PokemonSearch"
 import About from "./Pages/About"
+import Contact from "./Pages/Contact"
 import {CartProvider} from './component/context/CartContext'
 import { BrowserRouter as Router , Routes , Route } from 'react-router-dom'
 
@@ -21,15 +22,13 @@ export default function App() {
           <Routes>
             <Route path='/' element={<Home/>} />
             <Route path='/Project' element={<Project/>} />
-            {/* <Route path='/About' element={<About/>} />
-            <Route path='/Contact' element={<Contact/>} /> */}
+            <Route path='/About' element={<About/>} />
+            <Route path='/Contact' element={<Contact/>} />
             <Route path='/UserCard' element={<UserCard/>} />
             <Route path='/PokemonGallery' element={<PokemonGallery/>} />
             <Route path='/PokemonShop' element={<PokemonShop/>} />
             <Route path='/PokemonShopCart' element={<PokemonShopCart/>} />
             <Route path='/PokemonSearch' element={<PokemonSearch/>} />
-            <Route path='/About' element={<About/>} />
-            {/* <Route path='/Contact' element={<Contact/>} /> */}
             <Route path='*' element={<div className='flex items-center justify-center min-h-[100dvh] bg-crt-white dark:bg-void-black overflow-hidden'>
             <img className='inline-block max-w-40 max-h-40' src="/png-icon/error.png" alt="error-png"/>
             </div>} />
