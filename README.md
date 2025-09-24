@@ -41,5 +41,4 @@ https://reactpokemonproject.netlify.app/
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/your-username/react-mini-projects.git
-   cd react-mini-projects
+https://github.com/Nikkihosseini/react-mini-projects.git
